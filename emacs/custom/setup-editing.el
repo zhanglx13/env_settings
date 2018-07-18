@@ -99,6 +99,7 @@
 ;;                                    ;;
 ;; GROUP: Editing -> Yasnippet        ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+(packages-require 'yasnippet-snippets)
 (packages-require 'yasnippet)
 (yas-global-mode 1)
 
