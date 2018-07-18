@@ -106,10 +106,28 @@
 ;(fa-config-default)
 ;(set-default 'semantic-case-fold t)
 
-;; To enable speedbar to show all files
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; PACKAGE: sr-speedbar                    ;;
+;;                                         ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (packages-require `sr-speedbar)
 (setq speedbar-show-unknown-files t)
 
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; PACKAGE: semantic refactor              ;;
+;;                                         ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+(packages-require 'srefactor)
+(require 'srefactor-lisp)
+
+;; OPTIONAL: ADD IT ONLY IF YOU USE C/C++.
+(semantic-mode 1) ;; -> this is optional for Lisp
+
+;;;;;;;;;;;;;;;;;;;;;;
+;; setup cuda mode  ;;
+;;;;;;;;;;;;;;;;;;;;;;
+(autoload 'cuda-mode "cuda-mode.el" "Cuda mode." t)
+(setq auto-mode-alist (append '(("/*.\.cu$" . cuda-mode)) auto-mode-alist))
 
 
 (provide 'setup-programming)
