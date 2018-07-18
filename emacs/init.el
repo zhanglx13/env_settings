@@ -60,8 +60,8 @@
 (load "dired+.el") ;; dired+ is no longer supported by MELPA
 (load "info+.el")
 (require 'setup-helm-gtags)
-;(require 'setup-cedet)
-
+(require 'setup-cedet)
+(require 'setup-latex)
 
 ;; [EMM] Active ggtags-mode in a few programming mode
 (add-hook 'c-mode-common-hook
@@ -95,7 +95,7 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (function-args highlight-numbers helm-projectile helm-config helm-lib discover-my-major info+ em-alias dired+ dired-x ibuffer-vc expand-region yasnippet ws-butler volatile-highlights use-package undo-tree smartparens rainbow-delimiters paredit nord-theme iedit helm ggtags duplicate-thing dtrt-indent diminish company clean-aindent-mode anzu))))
+    (auctex surfraw function-args highlight-numbers helm-projectile helm-config helm-lib discover-my-major info+ em-alias dired+ dired-x ibuffer-vc expand-region yasnippet ws-butler volatile-highlights use-package undo-tree smartparens rainbow-delimiters paredit nord-theme iedit helm ggtags duplicate-thing dtrt-indent diminish company clean-aindent-mode anzu))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
