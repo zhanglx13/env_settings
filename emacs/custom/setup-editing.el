@@ -166,7 +166,24 @@
 (packages-require 'iedit)
 (global-set-key (kbd "C-;") 'iedit-mode)
 
+;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; PACKAGE: markdown     ;;
+;;                       ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;
+(use-package markdown-mode
+  :ensure t
+  :commands (markdown-mode gfm-mode)
+  :mode (("README\\.md\\'" . gfm-mode)
+         ("\\.md\\'" . markdown-mode)
+         ("\\.markdown\\'" . markdown-mode))
+  :init (setq markdown-command "/usr/bin/pandoc"))
 
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; PACKAGE: pandoc             ;;
+;;                             ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+(packages-require 'pandoc-mode)
+(add-hook 'markdown-mode-hook 'pandoc-mode)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Customized functions                      ;;
