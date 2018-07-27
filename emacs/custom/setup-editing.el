@@ -108,6 +108,8 @@
 (packages-require 'yasnippet-snippets)
 (packages-require 'yasnippet)
 (yas-global-mode 1)
+;; Configure snippet load dir
+(setq yas-snippet-dirs (append yas-snippet-dirs '("~/Dropbox/env_settings/emacs/snippets")))
 
 ;; PACKAGE: comment-dwim-2
 (global-set-key (kbd "M-;") 'comment-dwim-2)
