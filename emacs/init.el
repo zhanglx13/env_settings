@@ -39,8 +39,8 @@
 (setq use-package-always-ensure t)
 
 ;; add your modules path
-(add-to-list 'load-path "~/.emacs.d/custom/")
-(add-to-list 'load-path "~/.emacs.d/custom/nyan/")
+(add-to-list 'load-path "~/Dropbox/env_settings/emacs/custom/")
+(add-to-list 'load-path "~/Dropbox/env_settings/emacs/custom/nyan/")
 
 ;; load your modules
 (load "emacs-in-a-box.el")
