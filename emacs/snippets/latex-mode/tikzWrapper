@@ -1,0 +1,10 @@
+# key: tikzp
+# name: tikz wrapper for figures
+# --
+\begin{tikzpicture}
+\draw [help lines] (-4,2) grid (4, -2);
+\draw (0,0) circle (2pt);
+\begin{pgfonlayer}{bg}
+    \node [inner sep=0pt] at (0,0) {$0};
+\end{pgfonlayer}
+\end{tikzpicture}

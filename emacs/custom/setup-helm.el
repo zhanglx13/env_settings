@@ -141,6 +141,7 @@
       (setq projectile-switch-project-action 'helm-projectile)
       :config
       (projectile-mode 1)
+      (define-key projectile-mode-map (kbd "C-c C-p") 'projectile-command-map)
       (helm-projectile-on))))
 
 ;(helm-autoresize-mode t)

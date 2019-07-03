@@ -118,8 +118,8 @@ if ! shopt -oq posix; then
   fi
 fi
 
-# Tilix configurations for VTE
-if [ $TILIX_ID ] || [ $VTE_VERSION ]; then
+# vte config for Tilix
+if [[ $TILIX_ID ]]; then
         source /etc/profile.d/vte.sh
 fi
 
@@ -132,8 +132,8 @@ alias .3='cd ../../../'
 alias .4='cd ../../../../'
 alias ~='cd ~'
 
+
 # add this configuration to ~/.bashrc
-# for hstr
 export HH_CONFIG=hicolor         # get more colors
 shopt -s histappend              # append new history items to .bash_history
 export HISTCONTROL=ignorespace   # leading space hides commands from history
@@ -144,8 +144,7 @@ export PROMPT_COMMAND="history -a; history -n; ${PROMPT_COMMAND}"   # mem/file s
 if [[ $- =~ .*i.* ]]; then bind '"\C-r": "\C-a hh -- \C-j"'; fi
 # if this is interactive shell, then bind 'kill last command' to Ctrl-x k
 if [[ $- =~ .*i.* ]]; then bind '"\C-xk": "\C-a hh -k \C-j"'; fi
+#source /home/lixun/.oh-my-git/prompt.sh
 
-# post configuration of CUDA toolkit
-export PATH=/usr/local/cuda-9.0/bin${PATH:+:${PATH}}
-export LD_LIBRARY_PATH=/usr/local/cuda-9.0/lib${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
-
+# Using generated database from GNU Global
+export GTAGSLIBPATH=$HOME/.gtags/

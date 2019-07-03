@@ -1,0 +1,25 @@
+# .notmuch-config - Configuration file for the notmuch mail system
+#
+# For more information about notmuch, see http://notmuchmail.org
+
+[database]
+path=/home/lixun/.maildir
+
+[user]
+name=Lixun Zhang
+primary_email=zhanglx@utexas.edu
+# If you have mutiple accuonts, uncomment the line below.
+# other_email=other_email@gmail.com
+
+[new]
+tags=unread;new;
+ignore=
+
+[search]
+exclude_tags=deleted;spam;
+
+[maildir]
+synchronize_flags=true
+
+[crypto]
+gpg_path=gpg2

@@ -1,0 +1,22 @@
+-inbox +sent from:zhanglx@utexas.edu
+-inbox -sent +note from:zhanglx@utexas.edu and subject:note
+-inbox +sent from:zhang.lixun13@gmail.com
+-inbox +tumi from:abcdefgzww@gmail.com
+-inbox -unread +lifesavvy from:lifesavvy@lifesavvy.com
+-inbox -unread +hotogeek from:newsletter@howtogeek.com
+-inbox +utcsadvice from:utcs-advice@utlists.utexas.edu
+-inbox +linux-journal from:issuenotice@linuxjournal.com
+-inbox -unread +newyorker from:thenewyorker@eml.condenast.com
+-inbox -unread +newyorker from:newyorker@newsletter.newyorker.com
+-inbox +course-dev from:marla@austin.utexas.edu
+-inbox -unread +llvm-weekly from:list@llvmweekly.org
+-inbox -unread +machine-design from:news@enews.machinedesign.com
+-inbox -unread +machine-design from:MachineDesign@enews.machinedesign.com
+-inbox -unread +deleted +savethechildren from:email@e.savethechildren.org
+-inbox -unread +deleted +starbucks from:Starbucks@e.starbucks.com
+-inbox -unread +deleted +texastoday +news from:TexasToday@utexas.edu
+-inbox -unread +betterexplained from:kalid@betterexplained.com
+-inbox +linux -new -unread from:info@linux-magazine.com
+-inbox +amazon -new -unread from:store-news@amazon.com
+-inbox -new -unread +SO from:do-not-reply@stackoverflow.email
+-inbox -new -unread +enterprise from:EnterprisePlus@email.enterprise.comw

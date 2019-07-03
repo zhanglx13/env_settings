@@ -1,0 +1,31 @@
+[general]
+accounts = UTmail
+pythonfile = ~/.offlineimap.py
+
+[Account UTmail]
+localrepository = GmailLocal
+remoterepository = GmailRemote
+#autorefresh = 5
+maxage = 2015-05-21
+postsynchook = ~/.config/offlineimap/postsync.sh
+
+
+[Repository GmailLocal]
+type = Maildir
+localfolders = ~/.maildir/
+
+[Repository GmailRemote]
+type = Gmail
+sslcacertfile = /etc/ssl/certs/ca-certificates.crt
+remoteuser = zhanglx@utexas.edu
+realdelete = no
+createfolders = false
+remotepasseval = get_password_emacs("imap.gmail.com",
+                                     "zhanglx@utexas.edu",
+                                     "993")
+folderfilter = lambda foldername: foldername  not in ['[Gmail]/All Mail',
+                            '[Gmail]/Trash', '[Gmail]/Bin', 
+                            '[Gmail]/Spam','SPAM' ]
+holdconnectionopen = true
+keepalive = 60
+ssl_version = tls1_2
