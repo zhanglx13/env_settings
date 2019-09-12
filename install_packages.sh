@@ -29,6 +29,7 @@ sudo apt install tilix
 sudo update-alternatives --config x-terminal-emulator
 sudo ln -s /etc/profile.d/vte-2.91.sh /etc/profile.d/vte.sh
 copy nord.json to /usr/share/tilix/schemes
+get .bashrc from dropbox
 # install emacs
 sudo add-apt-repository ppa:kelleyk/emacs
 sudo apt update
@@ -43,6 +44,8 @@ install notmuch package in emacs
 # install offlineimap
 sudo apt install python-pip
 pip install --user offlineimap
+(Update Sep. 11: The above pip install does not work on Ubutu 18.04
+Offlineimap can be install using apt install)
 sudo cp ~/.local/bin/offlineimap /usr/local/bin/
 get offline settings from Dropbox/env_settings/offline_notmuch
   offlineimap <-- this is the ~/.config/offlineimap folder
@@ -51,7 +54,7 @@ get offline settings from Dropbox/env_settings/offline_notmuch
   .offlineimap.py
   .offlineimap.pyc
   .notmuch_config
-.authorinfo should contain the following
+.authinfo should contain the following
 machine imap.gmail.com login zhanglx@utexas.edu port 993 password fgyxviafhuzblzkb
 # sign the key
 gpg -se .authinfo
