@@ -21,6 +21,10 @@
 (package-initialize)
 (package-refresh-contents)
 
+;; This sets $MANPATH, $PATH and exec-path from your shell, but only on OS X and Linux.
+(when (memq window-system '(mac ns x))
+  (exec-path-from-shell-initialize))
+
 (defun packages-require (&rest packs)
   "Install and load a package. If the package is not available install it automaticaly."
   (mapc  (lambda (package)
@@ -125,7 +129,21 @@
 
 (require 'bbdb)
 
-
+;; Restore the arrow key behavior for Helm
+;; since it is changed in a recent update of helm
+(define-key helm-map (kbd "<left>") 'helm-previous-source)
+(define-key helm-map (kbd "<right>") 'helm-next-source)
+;; for helm-find-files
+(customize-set-variable 'helm-ff-lynx-style-map t)
+;; for helm-imenu
+(customize-set-variable 'helm-imenu-lynx-style-map t)
+;; for semantic
+(customize-set-variable 'helm-semantic-lynx-style-map t)
+;; for helm-occur
+(customize-set-variable 'helm-occur-use-ioccur-style-keys t)
+;; for helm-grep
+(customize-set-variable 'helm-grep-use-ioccur-style-keys t)
+;; Done restoring arrow key behavior of helm
 
 (provide 'init)
 ;;; init.el ends here
