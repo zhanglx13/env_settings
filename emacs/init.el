@@ -106,7 +106,7 @@
 (setq user-mail-address "zhanglx@utexas.edu"
       user-full-name "Lixun Zhang")
 ;; smtp config
-(setq smtpmail-smtp-server "smtp.gmail.com"
+(setq smtpmail-smtp-server "mail2.cs.utexas.edu"
       message-send-mail-function 'message-smtpmail-send-it)
 
 ;; report problems with the smtp server
@@ -144,6 +144,9 @@
 ;; for helm-grep
 (customize-set-variable 'helm-grep-use-ioccur-style-keys t)
 ;; Done restoring arrow key behavior of helm
+
+;; setup key bindings for multiple cursors
+(global-set-key (kbd "C-c m c") 'mc/edit-lines)
 
 (provide 'init)
 ;;; init.el ends here

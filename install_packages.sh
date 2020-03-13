@@ -54,8 +54,25 @@ get offline settings from Dropbox/env_settings/offline_notmuch
   .offlineimap.py
   .offlineimap.pyc
   .notmuch_config
+# Email configuration
 .authinfo should contain the following
-machine imap.gmail.com login zhanglx@utexas.edu port 993 password fgyxviafhuzblzkb
+machine imap.gmail.com login zhanglx@utexas.edu port 993 password app-password
+Note that "app-password" is generated from google account -> security -> app password
+
+In notmuch, when you C-c C-c to send the email, it asks you about the server.
+The server name should be set as specified in this link
+https://www.cs.utexas.edu/facilities-documentation/email-configuration
+Note that the server for in mail (imap) is different from server for out mail (smtp).
+To set the smtp server, this needs to be done in emacs init.el as follows
+
+;; setup the mail address and use name
+(setq mail-user-agent 'message-user-agent)
+(setq user-mail-address "zhanglx@utexas.edu"
+      user-full-name "Lixun Zhang")
+;; smtp config
+(setq smtpmail-smtp-server "mail2.cs.utexas.edu"
+      message-send-mail-function 'message-smtpmail-send-it)
+
 # sign the key
 gpg -se .authinfo
 chmod 600 .authinfo.gpg
