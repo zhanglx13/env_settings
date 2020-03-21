@@ -1,1 +1,3 @@
-machine imap.gmail.com login zhanglx@utexas.edu port 993 password fgyxviafhuzblzkb
+machine mail2.cs.utexas.edu login lxzhang port 25 password 235813Abc
+machine imap.gmail.com login zhanglx@utexas.edu port 993 password jdijlcelbqpiqwvk
+machine smtp.gmail.com login zhanglx@utexas.edu port 993 password jdijlcelbqpiqwvk
