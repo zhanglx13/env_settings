@@ -13,6 +13,7 @@ postsynchook = ~/.config/offlineimap/postsync.sh
 [Repository GmailLocal]
 type = Maildir
 localfolders = ~/.maildir/
+nametrans = lambda foldername: re.sub('sent', '[Gmail].Sent Mail', foldername)
 
 [Repository GmailRemote]
 type = Gmail
@@ -26,6 +27,7 @@ remotepasseval = get_password_emacs("imap.gmail.com",
 folderfilter = lambda foldername: foldername  not in ['[Gmail]/All Mail',
                             '[Gmail]/Trash', '[Gmail]/Bin', 
                             '[Gmail]/Spam','SPAM' ]
+nametrans = lambda foldername: re.sub('.*Sent Mail$', 'sent', foldername)
 holdconnectionopen = true
 keepalive = 60
 ssl_version = tls1_2
