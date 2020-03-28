@@ -21,3 +21,4 @@
 -inbox -new -unread +SO from:do-not-reply@stackoverflow.email
 -inbox -new -unread +enterprise from:EnterprisePlus@email.enterprise.comw
 +COVID subject:*COVID* OR body:*COVID*
+-inbox +COA +bill from:do-not-reply@coautilitiesemail.com
